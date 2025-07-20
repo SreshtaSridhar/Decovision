@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Parties</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Parties Templates</h1>
+        <p class="subtext">Select a template for your event:</p>
+        
+        <div class="templates-container">
+            <!-- Template 1 -->
+            <div class="template-card" onclick="openPopup('Elegant Conference', 'template1.jpg', [
+                'Backdrop: ₹3,000 - ₹10,000',
+                'Lighting: ₹1,600 - ₹6,600',
+                'Balloon Decorations: ₹4,100 - ₹12,300',
+                'Table Decor: ₹1,500 - ₹5,000',
+                'Snacks & Treats: ₹2,500 - ₹8,000 (depending on quantity)'
+            ], '12,700 to ₹41,900')">
+                <img src="personal temp1.jpg" alt="Elegant Conference">
+                <h2>Elegant Celebration</h2>
+            </div>
+            
+            <!-- Template 2 -->
+            <div class="template-card" onclick="openPopup('Modern Business Meet', 'template2.jpg', [
+                'Branch Tree: ₹500 - ₹1,500',
+                'Lighting: ₹1,600 - ₹6,600',
+                'Photo Clips: ₹200 - ₹600',
+                'Photos: ₹500 - ₹2,000 (printing cost)',
+                'Base: ₹300 - ₹1,000'
+            ], '₹3,100 to ₹11,700')">
+                <img src="personal temp2.jpg" alt="Modern Business Meet">
+                <h2>Memory Lane Celebration</h2>
+            </div>
+
+            <!-- Template 3 -->
+            <div class="template-card" onclick="openPopup('Modern Business Meet', 'template2.jpg', [
+                'Backdrop: ₹3,000 - ₹10,000',
+                'Balloons: ₹2,500 - ₹6,000',
+                'Lighting: ₹1,600 - ₹6,600',
+                'Table Decor: ₹1,500 - ₹5,000',
+                'Plants/Greenery: ₹1,000 - ₹3,000'
+            ], '₹₹9,600 to ₹30,600')">
+                <img src="personal temp3.jpg" alt="Modern Business Meet">
+                <h2>Cozy Birthday Setup</h2>
+            </div>
+            
+            <!-- Template 4 -->
+            <div class="template-card" onclick="openPopup('Networking Event', 'template3.jpg', [
+                'Balloons: ₹2,500 - ₹6,000',
+                'Lighting: ₹1,600 - ₹6,600',
+                'Table Decor: ₹1,500 - ₹5,000',
+                'Floral Arrangement: ₹1,000 - ₹3,000',
+                'Backdrop: ₹1,500 - ₹5,000'
+            ], '₹8,100 to ₹25,600')">
+                <img src="personal temp4.jpg" alt="Networking Event">
+                <h2>Chic Balloon Party</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <img id="popup-image" src="" alt="Template Image">
+            <h2 id="popup-title"></h2>
+            <ul id="popup-details"></ul>
+            <p class="cost"><strong>Cost: <span id="popup-cost"></span></strong></p>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(title, image, details, cost) {
+            document.getElementById("popup-title").innerText = title;
+            document.getElementById("popup-image").src = image;
+            document.getElementById("popup-cost").innerText = cost;
+
+            let detailsList = document.getElementById("popup-details");
+            detailsList.innerHTML = "";
+            details.forEach(item => {
+                let li = document.createElement("li");
+                li.innerText = item;
+                detailsList.appendChild(li);
+            });
+
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+</body>
+</html>
