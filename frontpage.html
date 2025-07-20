@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecoVision - Login</title>
+    <link rel="stylesheet" href="auth-styles.css"> <!-- Ensure the correct CSS file is linked -->
+</head>
+<body>
+    <div class="container">
+        <h1><em>DecoVision</em></h1>
+        <p>Design Your Dream Instantly</p>
+
+        <div class="auth-box">
+            <!-- Login Form -->
+            <div id="loginForm">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
+                <button id="loginBtn">Login</button>
+                <p class="toggle-text">New here? <span id="showSignup">Create an account</span></p>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signupForm" class="hidden">
+                <input type="text" id="fullName" placeholder="Full Name">
+                <input type="email" id="signupEmail" placeholder="Email">
+                <input type="password" id="signupPassword" placeholder="Password">
+                <button id="signupBtn">Sign Up</button>
+                <p class="toggle-text">Already have an account? <span id="showLogin">Login</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
