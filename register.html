@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | DecoVision</title>
+    <link rel="stylesheet" href="auth-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1><em>DecoVision</em></h1>
+        <p><strong>Design Your Dream Instantly</strong></p>
+
+        <div class="auth-box">
+            <form id="registerForm" class="form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <p>Already have an account? <span id="goToLogin" class="toggle-text">Login</span></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const goToLogin = document.getElementById("goToLogin");
+
+            if (goToLogin) {
+                goToLogin.addEventListener("click", function () {
+                    console.log("Redirecting to auth.html...");
+                    window.location.href = "auth.html"; // Go back to login page
+                });
+            }
+        });
+    </script>
+</body>
+</html>
