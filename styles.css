@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4e8ff; /* Light Purple */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Single Row Layout */
+.templates {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 50px;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+/* Templates Wrapper */
+.templates-container {
+    display: flex;
+    justify-content: center; /* Center the templates horizontally */
+    align-items: center; /* Align them vertically */
+    flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+    gap: 20px; /* Add space between cards */
+    padding: 80px 50px; /* Adjusted padding */
+}
+
+/* Template Card */
+.template-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 260px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.template-card:hover {
+    transform: scale(1.06);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Template Image */
+.template-card img {
+    width: 100%;
+    height: 250px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures images scale properly without distortion */
+    border-radius: 12px 12px 0 0;
+}
+
+/* Template Title */
+.template-card h2 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px;
+    margin: 0;
+    background: #e6d3ff;
+    color: #4c2673;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Popup Modal */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+/* Popup Content */
+.popup-content {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    width: 420px;
+    text-align: left;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.popup-content ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+/* Close Button */
+.close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: #8e44ad;
+}
+
+/* Blur Effect */
+body.blur {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+/* Header */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: #2d1446; /* Dark Purple for contrast */
+    margin-bottom: 8px;
+}
